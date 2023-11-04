@@ -1,0 +1,46 @@
+.loaderContainer {
+  min-height: 100vh;
+  width: 100%;
+  padding: 100px 25px;
+  text-align: center;
+}
+
+.container {
+  min-height: 100vh;
+  width: 100%;
+  padding: 100px 25px;
+  text-align: center;
+  position: relative;
+  opacity: var(--loading-opacity);
+}
+
+.customCard:hover {
+  box-shadow: -1px 10px 29px 0px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  transition: 0.4s ease-in-out;
+}
+.detialsHeader {
+  gap: 4px;
+}
+.detialsHeader:hover {
+  cursor: pointer;
+  color: #0070f3;
+  transition: 0.4s ease-in-out;
+}
+.navItem {
+  color: #ffffffb9;
+  font-weight: 600;
+}
+.drawerItem:hover {
+  color: #0055f3aa;
+  transition: 0.3s ease-in-out;
+}
+
+.activeNavitem {
+  color: #fff;
+  font-weight: 600;
+}
+.activeDrawerItem {
+  color: #0055f3aa;
+  background-color: #00c6f353;
+}

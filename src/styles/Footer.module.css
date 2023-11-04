@@ -1,0 +1,13 @@
+.footer {
+  background-color: #c4dfdf;
+}
+.footer_logo {
+  text-decoration: none;
+  font-size: 25px;
+  font-weight: 600;
+  color: rgba(0, 166, 255, 0.987);
+}
+.footer_link {
+  text-decoration: none;
+  color: #000000b8;
+}

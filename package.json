@@ -1,22 +1,62 @@
 {
-  "name": "nextjs-project",
+  "name": "aws-cognito-user-authentication-app",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "eslint '*/**/*.{js,jsx,ts,tsx}' --quiet --fix",
+    "prepare": "husky install",
+    "lint-staged": "lint-staged"
   },
   "dependencies": {
-    "@types/node": "18.15.12",
-    "@types/react": "18.0.37",
-    "@types/react-dom": "18.0.11",
-    "eslint": "8.38.0",
-    "eslint-config-next": "13.3.0",
+    "@aws-amplify/ui-react": "^4.6.1",
+    "@emotion/cache": "^11.10.7",
+    "@emotion/react": "^11.10.6",
+    "@emotion/server": "^11.10.0",
+    "@emotion/styled": "^11.10.6",
+    "@mui/icons-material": "^5.11.16",
+    "@mui/material": "^5.12.1",
+    "aws-amplify": "^5.2.0",
     "next": "13.3.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "sass": "^1.62.0"
+  },
+  "devDependencies": {
+    "@types/react": "18.0.37",
+    "@typescript-eslint/eslint-plugin": "^5.59.0",
+    "@typescript-eslint/parser": "^5.59.0",
+    "eslint": "^8.38.0",
+    "eslint-config-next": "13.3.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-security": "^1.7.1",
+    "eslint-plugin-simple-import-sort": "^10.0.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.1",
+    "prettier": "^2.8.7",
     "typescript": "5.0.4"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": " yarn lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint '*/**/*.{js,jsx,ts,tsx}' --fix",
+      "prettier --write",
+      "git add"
+    ],
+    "*.{js,jsx,ts,tsx}/": [
+      "eslint --fix",
+      "git add"
+    ],
+    "*.{js,ts,scss,css,md}": "prettier --write"
   }
 }
